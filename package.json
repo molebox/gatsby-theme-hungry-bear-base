@@ -1,0 +1,67 @@
+{
+  "name": "gatsby-theme-hungry-bear-base",
+  "version": "0.0.1",
+  "description": "A base Gatsby theme",
+  "main": "index.js",
+  "author": "Hungry Bear Studio <roar@hungrybearstudio.com> (hungrybearstudio.com)",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint",
+    "eslint-check-rules": "./node_modules/.bin/eslint --print-config . | eslint-config-prettier-check",
+    "pretty-check": "prettier --check \"src/**/*.{ts,tsx,js}\"",
+    "pretty": "prettier --write \"src/**/*.{ts,tsx,js}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "yarn pretty-check",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@types/react-helmet": "^5.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "emotion-theming": "^10.0.10",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.1.5",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "gatsby": "^2.4.1",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.15",
+    "@types/react-dom": "^16.8.4",
+    "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-google-fonts": "^0.0.4",
+    "gatsby-plugin-page-creator": "^2.0.12",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-typescript": "^2.0.13",
+    "gatsby-source-filesystem": "^2.0.33",
+    "typescript": "^3.4.5"
+  }
+}
