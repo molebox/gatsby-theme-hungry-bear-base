@@ -1,21 +1,27 @@
 # gatsby-theme-hungry-bear-base
 
-A base Gatsby theme with emotion for styling, fonts, and some base components ready to use.
+A base Gatsby theme with emotion, google fonts and react-helmet setup.
 
 Current status: WIP
 
 ## Getting Started
 
-Clone this repo and run yarn at the root
+Add to your Gatsby sites gatsby-config.js just like you would with a plugin.
 
 ```
-yarn
-```
-
-Run example site
-
-```
-yarn workspace site dev
+module.exports = {
+    __experimentalThemes: [
+       { 
+           resolve: 'gatsby-theme-hungry-bear-base',
+            options: {
+                title: 'Test Site',
+                description: 'The is a description of the wesbite',
+                author: 'Hungry Bear Studio',
+                twitter: '@studio_hungry'
+            }
+        }
+    ]
+}
 ```
 
 ## Built With
@@ -27,8 +33,6 @@ yarn workspace site dev
 ## Authors
 
 * **Rich Haines** - *Hungry Bear Studio*
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
