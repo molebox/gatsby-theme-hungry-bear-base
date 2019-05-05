@@ -1,25 +1,19 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { ThemeProvider } from "emotion-theming";
-import { colors } from "../Utilities";
-import { Box } from "../components/Box";
 import SEO from "../components/SEO";
 
-const theme = {
-  colors
-};
-
 export default () => (
-  <ThemeProvider theme={theme}>
+  <div>
     <SEO />
     <div
       css={css`
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 100px;
       `}
     >
-      <Box color={theme.colors.accent}>Hello!</Box>
+      <h1>This is the base theme</h1>
     </div>
-  </ThemeProvider>
+  </div>
 );
