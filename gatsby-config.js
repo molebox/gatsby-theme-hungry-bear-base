@@ -23,6 +23,13 @@ module.exports = (options) => {
                 },
             },
             {
+              resolve: "gatsby-plugin-compile-es6-packages",
+              options: {
+                // replace with the name of your theme
+                modules: ["gatsby-theme-hungry-bear-base"],
+              },
+            },
+            {
                 resolve: 'gatsby-source-filesystem',
                 options: {
                   path: path.join(__dirname, 'src', 'pages'),

@@ -1,6 +1,8 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-import SEO from "../components/SEO";
+import * as React from "react";
+import { css } from "@emotion/core";
+import { Box } from "../components/Box";
+import { colors } from '../Utilities';
+import SEO from '../components/SEO';
 
 export default () => (
   <div>
@@ -13,7 +15,7 @@ export default () => (
         margin-top: 100px;
       `}
     >
-      <h1>This is the base theme</h1>
+      <Box color={colors.accent}>Hello</Box>
     </div>
   </div>
 );
